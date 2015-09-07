@@ -1,0 +1,14 @@
+bower install system.js
+npm install babel-core
+npm install http-server
+
+<script src='bower_components/system.js/dist/system.js'></script>
+
+System.config({
+	transpiler: 'babel';
+	map: {
+		'babel': 'node_modules/babel-core/browser.js'
+	}
+});
+
+node node_modules/http-server/bin/http-server -p 3000
