@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tests</title>
+</head>
+<body>
+<script src="lib/system.js"></script>
+<script>
+    System.config({
+        transpiler: "babel",
+        babelOptions: {
+            optional: [
+                "runtime"
+            ]
+        },
+
+        map: {
+            babel: 'lib/browser.js'
+        }
+    });
+
+    System.import('main.js');
+</script>
+</body>
+</html>

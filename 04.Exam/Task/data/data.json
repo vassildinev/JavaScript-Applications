@@ -1,0 +1,200 @@
+{
+  "users": [
+    {
+      "username": "Minkov",
+      "passHash": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+      "usernameToLower": "minkov",
+      "id": "16655985-e510-43d4-ad1c-2388c76d1ef6",
+      "authKey": "16655985-e510-43d4-ad1c-2388c76d1ef6FwHCPd*bP:.;Fu&:evl)RPGg"
+    },
+    {
+      "username": "Minkov3",
+      "passHash": "1234567890123456789012345678901234567890",
+      "usernameToLower": "minkov3",
+      "id": "bd04b3b8-5586-47ad-bf8f-db6c531dbb73",
+      "authKey": "bd04b3b8-5586-47ad-bf8f-db6c531dbb73erxSIAJyVOzIEIrpMFbanscO"
+    },
+    {
+      "username": "vankata",
+      "passHash": "a3e398edbb25d3064b3898497c2ca30a8bfe9031",
+      "usernameToLower": "vankata",
+      "id": "8e8f733a-eba3-4b04-b5be-23f3441b4509",
+      "authKey": "8e8f733a-eba3-4b04-b5be-23f3441b4509YjRbAFklEmnndvLjWVoXGIRH"
+    },
+    {
+      "username": "stamat",
+      "passHash": "aee4997c7393a9f54c4e30499101d208e4a1445b",
+      "usernameToLower": "stamat",
+      "id": "371ac4f7-7f29-41c4-91a6-94ed15401a2b",
+      "authKey": "371ac4f7-7f29-41c4-91a6-94ed15401a2blWmRWhbFSOSATchtganICnqx"
+    },
+    {
+      "username": "qwerty",
+      "passHash": "cf7c906bfbb48e72288fc016bac0e6ed58b0dc2a",
+      "usernameToLower": "qwerty",
+      "id": "ceb1a0db-d8dd-44a2-9434-6ba020a1ae79",
+      "authKey": "ceb1a0db-d8dd-44a2-9434-6ba020a1ae79DfIOjRiTGCuSkailoLjFARkI"
+    },
+    {
+      "username": "petranka",
+      "passHash": "e9b881a5a1f9e0983df510e4f41d321078bc4560",
+      "usernameToLower": "petranka",
+      "id": "50eafd34-aa59-435a-86ed-9db610a5bac3",
+      "authKey": "50eafd34-aa59-435a-86ed-9db610a5bac3ovbkxUxwMGPYjvTESDfPduyK"
+    },
+    {
+      "username": "vesko3",
+      "passHash": "00703d64fcf759a0207e4a0016c9bc8cb1712b17",
+      "usernameToLower": "vesko3",
+      "id": "6a983d3a-3ce2-461d-b751-4bebba083b89",
+      "authKey": "6a983d3a-3ce2-461d-b751-4bebba083b89XGYgUPcoDJAOWcJyuNwrlsFI"
+    }
+  ],
+  "cookies": [
+    {
+      "text": "Test",
+      "category": "Home",
+      "userId": "16655985-e510-43d4-ad1c-2388c76d1ef6",
+      "likes": 10,
+      "dislikes": 15,
+      "img": "https://dayinthelifeofapurpleminion.files.wordpress.com/2014/12/batman-exam.jpg",
+      "shareDate": "2015-09-09T14:53:30.290Z",
+      "id": "2dae28aa-ee64-4bc1-8591-29284d88c9e9"
+    },
+    {
+      "text": "May the Force with you",
+      "category": "WOrk",
+      "userId": "16655985-e510-43d4-ad1c-2388c76d1ef6",
+      "likes": 28,
+      "dislikes": 7,
+      "img": "https://dayinthelifeofapurpleminion.files.wordpress.com/2014/12/batman-exam.jpg",
+      "shareDate": "2015-09-09T14:53:56.482Z",
+      "id": "e2fdbf82-54c3-488f-add4-9af3262c2572",
+      "hours": 9
+    },
+    {
+      "text": "Hello!",
+      "category": "Home",
+      "userId": "bd04b3b8-5586-47ad-bf8f-db6c531dbb73",
+      "likes": 14,
+      "dislikes": 9,
+      "img": "https://dayinthelifeofapurpleminion.files.wordpress.com/2014/12/batman-exam.jpg",
+      "shareDate": "2015-09-10T06:24:18.743Z",
+      "id": "ea91a233-bcf3-48b6-933f-05857f4aea87"
+    },
+    {
+      "text": "May the Force with you",
+      "category": "WOrk",
+      "userId": "8e8f733a-eba3-4b04-b5be-23f3441b4509",
+      "likes": 0,
+      "dislikes": 0,
+      "img": "https://dayinthelifeofapurpleminion.files.wordpress.com/2014/12/batman-exam.jpg",
+      "shareDate": "2015-09-10T10:41:41.530Z",
+      "hours": 9,
+      "id": "82d179a9-d6af-41fb-a3ab-cba829b4ff0d"
+    },
+    {
+      "text": "May the Force with you",
+      "category": "WOrk",
+      "userId": "8e8f733a-eba3-4b04-b5be-23f3441b4509",
+      "likes": 0,
+      "dislikes": 0,
+      "img": "https://dayinthelifeofapurpleminion.files.wordpress.com/2014/12/batman-exam.jpg",
+      "shareDate": "2015-09-10T10:54:03.535Z",
+      "hours": 9,
+      "author": "vankata",
+      "id": "0bd0b8db-4c52-4a6b-9ce7-23db40773688"
+    },
+    {
+      "text": "This is a special fortune cookie",
+      "category": "Urgent",
+      "img": "https://dayinthelifeofapurpleminion.files.wordpress.com/2014/12/batman-exam.jpg",
+      "userId": "8e8f733a-eba3-4b04-b5be-23f3441b4509",
+      "likes": 20,
+      "dislikes": 6,
+      "shareDate": "2015-09-10T11:19:05.050Z",
+      "id": "e9dc63c2-5c4b-4478-aaef-dc0b587b1afa"
+    },
+    {
+      "text": "This is a special fortune cookie",
+      "category": "Urgent",
+      "img": "https://dayinthelifeofapurpleminion.files.wordpress.com/2014/12/batman-exam.jpg",
+      "userId": "8e8f733a-eba3-4b04-b5be-23f3441b4509",
+      "likes": 10,
+      "dislikes": 7,
+      "shareDate": "2015-09-10T11:23:16.521Z",
+      "author": "vankata",
+      "id": "49e033e9-346e-45b6-b2a0-2d012922b4cc"
+    },
+    {
+      "text": "Pesho is cool",
+      "category": "Awesomeness",
+      "img": "https://dayinthelifeofapurpleminion.files.wordpress.com/2014/12/batman-exam.jpg",
+      "userId": "8e8f733a-eba3-4b04-b5be-23f3441b4509",
+      "likes": 14,
+      "dislikes": 0,
+      "shareDate": "2015-09-10T11:23:49.020Z",
+      "id": "b1a721b3-955a-4e62-8c44-c0aba9f946fc"
+    },
+    {
+      "text": "Pesho",
+      "category": "Awesomeness",
+      "img": "https://dayinthelifeofapurpleminion.files.wordpress.com/2014/12/batman-exam.jpg",
+      "userId": "8e8f733a-eba3-4b04-b5be-23f3441b4509",
+      "likes": 0,
+      "dislikes": 0,
+      "shareDate": "2015-09-10T12:05:13.594Z",
+      "id": "d3fefc30-6679-40de-bc68-bd1cdf194bee"
+    },
+    {
+      "text": "Gosho",
+      "category": "Awesomeness",
+      "img": "https://dayinthelifeofapurpleminion.files.wordpress.com/2014/12/batman-exam.jpg",
+      "userId": "8e8f733a-eba3-4b04-b5be-23f3441b4509",
+      "likes": 0,
+      "dislikes": 0,
+      "shareDate": "2015-09-10T12:05:25.864Z",
+      "id": "6c7d5b67-c557-4cba-9a8b-5e656aaa69c0"
+    },
+    {
+      "text": "dsbrgbntgb",
+      "category": "shthttrgrte",
+      "img": "https://dayinthelifeofapurpleminion.files.wordpress.com/2014/12/batman-exam.jpg",
+      "userId": "6a983d3a-3ce2-461d-b751-4bebba083b89",
+      "likes": 0,
+      "dislikes": 0,
+      "shareDate": "2015-09-10T13:31:56.148Z",
+      "id": "97a50ac1-6255-470b-8e70-4dbcc2736dc2"
+    },
+    {
+      "text": "aaaaaaaa",
+      "category": "Peshoo",
+      "img": "https://dayinthelifeofapurpleminion.files.wordpress.com/2014/12/batman-exam.jpg",
+      "userId": "6a983d3a-3ce2-461d-b751-4bebba083b89",
+      "likes": 0,
+      "dislikes": 0,
+      "shareDate": "2015-09-10T13:44:37.314Z",
+      "id": "2b3eae60-27e2-40f5-bbde-b51219c73ceb"
+    },
+    {
+      "text": "vankata e pich",
+      "category": "Awesomeness",
+      "img": "https://dayinthelifeofapurpleminion.files.wordpress.com/2014/12/batman-exam.jpg",
+      "userId": "8e8f733a-eba3-4b04-b5be-23f3441b4509",
+      "likes": 0,
+      "dislikes": 0,
+      "shareDate": "2015-09-10T13:48:41.131Z",
+      "id": "d7760d3f-a8f0-47b7-94fb-52456fc4151c"
+    },
+    {
+      "text": "hello js",
+      "category": "Awesomeness",
+      "img": "http://www.keenthemes.com/preview/metronic/theme/assets/global/plugins/jcrop/demos/demo_files/image1.jpg",
+      "userId": "8e8f733a-eba3-4b04-b5be-23f3441b4509",
+      "likes": 15,
+      "dislikes": 0,
+      "shareDate": "2015-09-10T13:49:07.947Z",
+      "id": "4eca16b5-f1ca-45d8-b128-dcbf2b799d77"
+    }
+  ]
+}

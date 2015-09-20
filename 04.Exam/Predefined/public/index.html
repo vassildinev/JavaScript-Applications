@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Self Manager</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="bower_components/toastr/toastr.css"/>
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top" style="position: relative !important;">
+    <div class="navbar-header">
+        <a href="#/home" class="navbar-brand">JS Apps Exam</a>
+    </div>
+    <div class="container">
+        <ul class="nav navbar-nav navbar-left">
+            <li><a href="#/home">Home</a></li>
+            <li><a id="index-btn-login" href="#/login">Log in</a></li>
+            <li><a id="index-btn-register" href="#/register">Register</a></li>
+            <li><a id="logout" style="display: none;" href="#/home">Log out</a></li>
+            <li><a href="#/bla">Pesho</a></li>
+            <li><a href="#/bla">Gosho</a></li>
+            <li><a href="#/bla">Stamat</a></li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+            <li><a class="navbar-brand" href="#/home">Welcome <span id="username-placeholder"></span></a></li>
+        </ul>
+    </div>
+</nav>
+<div id="content"></div>
+<div class="panel-footer" style="text-align: center;position:fixed;bottom: 0; width: 100%;;">
+    <div class="container">
+        Telerik Academy 2015 JS Apps Exam 10/09/2015
+    </div>
+</div>
+<script src="bower_components/system.js/dist/system.js"></script>
+<script>
+    System.config({
+        transpiler: "babel",
+
+        map: {
+            jquery: 'bower_components/jquery/dist/jquery.js',
+            babel: 'bower_components/browser/index.js',
+            sammy: 'bower_components/sammy/lib/sammy.js',
+            toastr: 'bower_components/toastr/toastr.js',
+            bootstrap: 'bower_components/bootstrap/dist/js/bootstrap.js',
+            cryptojs: 'bower_components/sha1/index.js',
+            handlebars: 'bower_components/handlebars/handlebars.js',
+            underscore: 'bower_components/underscore/underscore.js',
+            moment: 'bower_components/moment/moment.js',
+            jqueryui: 'bower_components/jquery-ui/jquery-ui.js'
+        },
+
+        depCache: {
+            sammy: ['jquery'],
+            toastr: ['jquery']
+        }
+    });
+
+    System.import('./js/app.js')
+</script>
+
+<script id="home-template" type="text/x-handlebars-template">
+    <div class="container" style="text-align: center;">
+        <h1>Welcome to JS Apps Exam</h1>
+    </div>
+</script>
+
+<script id="login-template" type="text/x-handlebars-template">
+    <div class="container">
+        <form class="form-signin" style="width: 300px">
+            <h2 class="form-signin-heading">Please log in</h2>
+            <label for="inputUsername" class="sr-only">Username</label>
+            <input type="text" id="inputUsername" class="form-control" placeholder="Username" required="" autofocus="">
+            <label for="inputPassword" class="sr-only">Password</label>
+            <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
+            <button class="btn btn-lg btn-primary btn-block" id="btn-login">Log in</button>
+        </form>
+    </div>
+</script>
+
+<script id="register-template" type="text/x-handlebars-template">
+    <div class="container">
+        <form class="form-signin" style="width: 300px">
+            <h2 class="form-signin-heading">Please register</h2>
+            <label for="inputUsername" class="sr-only">Username</label>
+            <input type="text" id="inputUsername" class="form-control" placeholder="Username" required="" autofocus="">
+            <label for="inputPassword" class="sr-only">Password</label>
+            <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
+            <button class="btn btn-lg btn-primary btn-block" id="btn-register">Register</button>
+        </form>
+    </div>
+</script>
+
+</body>
+</html>

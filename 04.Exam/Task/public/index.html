@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Fortune Cookies</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="bower_components/toastr/toastr.css"/>
+    <link rel="stylesheet" href="bower_components/jquery-ui/themes/base/jquery-ui.css"/>
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top" style="position: relative !important;">
+    <div class="navbar-header">
+        <a href="#/home" class="navbar-brand">Fortune Cookies</a>
+    </div>
+    <div class="container">
+        <ul class="nav navbar-nav navbar-left">
+            <li><a href="#/home">Home</a></li>
+            <li><a id="index-btn-login" href="#/login">Log in</a></li>
+            <li><a id="index-btn-register" href="#/register">Register</a></li>
+            <li><a id="my-cookie" href="#/my-cookie" style="display: none;">My cookie</a></li>
+            <li><a id="share-cookie" style="display: none;" href="#/share-cookie">Share cookie</a></li>
+            <li><a id="logout" style="display: none;" href="#/home">Log out</a></li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+            <li><a class="navbar-brand" href="#/home">Welcome <span id="username-placeholder"></span></a></li>
+        </ul>
+    </div>
+</nav>
+<div style="display: none;" id="cookies-tools" class="col-md-9">
+    <h1>Welcome to Fortune Cookies</h1>
+    <hr/>
+    <div style="width: 200px;">
+        <label for="sort-by">Sort by:</label>
+        <select id="sort-by" class="form-control">
+            <option value="default">Choose an option</option>
+            <option value="likes">Likes</option>
+            <option value="shareDate">Share date</option>
+        </select>
+
+        <label for="tb-filter">Filter by category:</label>
+        <input class="input input-sm" id="tb-filter" type="text"/>
+        <button id="btn-filter" class="btn btn-info">Filter</button>
+        <hr/>
+    </div>
+</div>
+<div id="content"></div>
+<div class="panel-footer" style="text-align: center;position:fixed;bottom: 0; width: 100%;;">
+    <div class="container">
+        Telerik Academy 2015 JS Apps Exam 10/09/2015
+    </div>
+</div>
+<script src="bower_components/system.js/dist/system.js"></script>
+<script>
+    System.config({
+        transpiler: "babel",
+
+        map: {
+            jquery: 'bower_components/jquery/dist/jquery.js',
+            babel: 'bower_components/browser/index.js',
+            sammy: 'bower_components/sammy/lib/sammy.js',
+            toastr: 'bower_components/toastr/toastr.js',
+            bootstrap: 'bower_components/bootstrap/dist/js/bootstrap.js',
+            cryptojs: 'bower_components/sha1/index.js',
+            handlebars: 'bower_components/handlebars/handlebars.js',
+            underscore: 'bower_components/underscore/underscore.js',
+            moment: 'bower_components/moment/moment.js',
+            jqueryui: 'bower_components/jquery-ui/jquery-ui.js'
+        },
+
+        depCache: {
+            sammy: ['jquery'],
+            toastr: ['jquery'],
+            jqueryui: ['jquery']
+        }
+    });
+
+    System.import('./js/app.js')
+</script>
+
+<script id="home-template" type="text/x-handlebars-template">
+    <div class="container" style="text-align: center;">
+        <div id="cookies-container" class="row">
+            <div class="col-md-12">
+                <div class="panel">
+                    <div class="panel-body">
+                        {{#each cookies}}
+                        <div class="row">
+                            <br>
+
+                            <div class="col-md-2 col-sm-3 text-center">
+                                <a class="story-img" href="#"><img src="{{img}}" style="width:150px;height:150px"></a>
+                            </div>
+                            <div class="col-md-10 col-sm-9">
+
+                                <div class="row">
+                                    <div class="col-xs-9">
+                                        <p style="font-size:20px"><strong>Text:</strong> {{text}}</p>
+
+                                        <p style="font-size:20px"><strong>Category:</strong> <a
+                                                href="#/home?category={{category}}">{{category}}</a>
+
+                                        <p style="font-size:20px"><strong> Share date:</strong> {{shareDate}}</p>
+
+                                        <!--<p style="font-size:20px"><strong> By:</strong> {{userId}}</p>-->
+
+
+                                        <ul class="list-inline">
+                                            <li><i class="glyphicon glyphicon-comment"></i> {{likes}} Likes
+                                                {{#if ../userLoggedIn}}<a class="like" href="#/cookies/{{id}}">Like</a>{{/if}}
+                                            </li>
+                                            <li><i class="glyphicon glyphicon-comment"></i> {{dislikes}} Dislikes
+                                                {{#if ../userLoggedIn}}<a class="dislike" href="#/cookies/{{id}}">Dislike</a>{{/if}}
+                                            </li>
+                                            <li>
+                                                {{#if ../userLoggedIn}}<i class="glyphicon glyphicon-share"></i>
+                                                <a class="share" href="#/cookies/{{id}}">Share</a>{{/if}}
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-xs-3"></div>
+                                </div>
+                                <br><br>
+                            </div>
+                        </div>
+                        <hr>
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+        </div>
+</script>
+
+<script id="login-template" type="text/x-handlebars-template">
+    <div class="container">
+        <form class="form-signin" style="width: 300px">
+            <h2 class="form-signin-heading">Please log in</h2>
+            <label for="inputUsername" class="sr-only">Username</label>
+            <input type="text" id="inputUsername" class="form-control" placeholder="Username" required="" autofocus="">
+            <label for="inputPassword" class="sr-only">Password</label>
+            <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
+            <button class="btn btn-lg btn-primary btn-block" id="btn-login">Log in</button>
+        </form>
+    </div>
+</script>
+
+<script id="register-template" type="text/x-handlebars-template">
+    <div class="container">
+        <form class="form-signin" style="width: 300px">
+            <h2 class="form-signin-heading">Please register</h2>
+            <label for="inputUsername" class="sr-only">Username</label>
+            <input type="text" id="inputUsername" class="form-control" placeholder="Username" required="" autofocus="">
+            <label for="inputPassword" class="sr-only">Password</label>
+            <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
+            <button class="btn btn-lg btn-primary btn-block" id="btn-register">Register</button>
+        </form>
+    </div>
+</script>
+
+<script id="share-cookie-template" type="text/x-handlebars-template">
+    <div class="container" style="width:500px;">
+        <div>
+            <h2>Share a new fortune cookie!</h2>
+        </div>
+        <div>
+            <div class="form-group">
+                <label for="tb-text">Text</label>
+                <textarea class="form-control" id="tb-text" placeholder="Text" style="resize:none"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="tb-category">Category</label>
+                <input type="text" class="form-control" id="tb-category" placeholder="Category">
+            </div>
+            <div class="form-group">
+                <label for="tb-image">Image</label>
+                <input type="text" class="form-control" id="tb-image" placeholder="Valid image url or simply Batman">
+            </div>
+            <button id="btn-share-new-cookie" type="submit" class="btn btn-default">Share</button>
+        </div>
+    </div>
+</script>
+
+<script id="my-cookie-template" type="text/x-handlebars-template">
+    <div class="row">
+        <br>
+
+        <div class="col-md-2 col-sm-3 text-center">
+            <a class="story-img" href="#"><img src="{{img}}" style="width:150px;height:150px"></a>
+        </div>
+        <div class="col-md-10 col-sm-9">
+
+            <div class="row">
+                <div class="col-xs-9">
+                    <p style="font-size:20px"><strong>Text:</strong> {{text}}</p>
+
+                    <p style="font-size:20px"><strong>Category:</strong> <a
+                            href="#/home?category={{category}}">{{category}}</a>
+
+                    <p style="font-size:20px"><strong> Share date:</strong> {{shareDate}}</p>
+
+                    <!--<p style="font-size:20px"><strong> By:</strong> {{userId}}</p>-->
+
+
+                    <ul class="list-inline">
+                        <li><i class="glyphicon glyphicon-comment"></i> {{likes}} Likes
+                            {{#if userLoggedIn}}<a class="like" href="#/cookies/{{id}}">Like</a>{{/if}}
+                        </li>
+                        <li><i class="glyphicon glyphicon-comment"></i> {{dislikes}} Dislikes
+                            {{#if userLoggedIn}}<a class="dislike" href="#/cookies/{{id}}">Dislike</a>{{/if}}
+                        </li>
+                        <li>
+                            {{#if userLoggedIn}}<i class="glyphicon glyphicon-share"></i>
+                            <a class="share" href="#/cookies/{{id}}">Share</a>{{/if}}
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-xs-3"></div>
+            </div>
+        </div>
+    </div>
+</script>
+
+</body>
+</html>

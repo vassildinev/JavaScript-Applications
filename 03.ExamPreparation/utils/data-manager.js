@@ -1,0 +1,5 @@
+var dataManager = {
+
+};
+
+export {dataManager}

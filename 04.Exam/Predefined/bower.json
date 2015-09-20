@@ -1,0 +1,27 @@
+{
+  "name": "JS-Apps-Exam",
+  "version": "1.0.0",
+  "homepage": "N/A",
+  "authors": [
+    "JS-Apps"
+  ],
+  "description": "This JSON contains references to all packages needed for the proper functioning of the JS-Apps-Exam Task",
+  "moduleType": [
+    "es6"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "browser": "https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.js",
+    "handlebars": "~4.0.2",
+    "jquery": "~2.1.4",
+    "jquery-ui": "~1.11.4",
+    "js.cookie": "https://raw.githubusercontent.com/js-cookie/js-cookie/master/src/js.cookie.js",
+    "moment": "~2.10.6",
+    "sammy": "~0.7.6",
+    "sha1": "http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/sha1.js",
+    "system.js": "~0.18.17",
+    "toastr": "~2.1.2",
+    "underscore": "~1.8.3"
+  }
+}
